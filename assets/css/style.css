@@ -27,6 +27,10 @@ a{
     text-decoration: none;
 }
 
+:root{
+    --primari-color: #FFB900;
+}
+
 /* Heder */
 
 .header.sticky{
@@ -87,11 +91,11 @@ a{
     display: inline-block ;
     min-width: 118px;
     color: #FFF;
-    padding: 10px;
+    padding: 0 10px;
+    line-height: 50px ;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
-    line-height: 1.76;
     border-radius: 24.5px;
     background: #171100;    
     
@@ -103,106 +107,276 @@ a{
 }
 /* hero */
 .hero{
-    margin-top: 72px;
-    display: flex;
-}
-.media{
-    position: relative;
+    background: #FFFCF4;
+    padding: 64px 0 64px;
+    
 }
 .hero_content{
     display: flex;
-
+   
+    
 }
-.hero .img_hero{
+.media_content_left{
+    width: 48%;
+    position: relative;
+    
+}
+/* css img content left */
+.img_content_left img{
     width: 470px;
     height: 685px;
     border-radius: 20px;
+}
+
+.img_block_contentleft{
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    width: 270px;
+    padding: 28px 63px 28px 24px ;
+    background: #FFF;
+     border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.item+.item{
+    margin-top: 20px;  
+}
+
+.img_block_contentleft .icon_title{
+    margin-left: 16px;
+}
+
+.item .icon_title p{
+    color: #5F5B53;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.item .icon_title strong{
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+
+/* img block */
+
+.item{
+    display: flex;
+   justify-content: center;
+   align-items: center;
     
 }
 
-.content_hero {
-    margin-left: 230px;
-    margin-top: 64px;
+
+/* content hero right */
+.content_hero_right{
+    width: 52% ;
+    
+    
 }
-.content_hero .title{
+
+.body_conent_hero_right{
+   margin-left: 130px;
+    padding-top: 64px;
+}
+.title{
     width: 470px;
     color: #171100;
     font-family: Sen;
-    font-size: 5.8rem;
+    font-size: 58px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 1.117;
-    letter-spacing: -1.16px;
+    line-height: 68px; /* 117.241% */
+    letter-spacing: -1.16px
 }
 
-.content_hero .decs{
-    padding: 22px 0 28px ;
+.content_hero_right .decs{
     color: #5F5B53;
     font-size: 1.8rem;
+    font-style: normal;
     font-weight: 400;
-    line-height: 1.66; 
+    line-height: 1.66; /* 166.667% */
+    margin-top: 22px;
+}
 
- }
-
- .button_hero_right{
+.button_hero_right{
     display: flex;
-    
- }
+    align-items: center ;
+    margin: 38px 0 48px;
+}
 
- .button_hero_right .btn_watch{
+.button_hero_right .btn_hero_right{
     min-width: 180px;
-    padding: 18px 0px;
-    border-radius: 32px;
-    background: #FFB900;
- }
+    line-height: 64px;
+    background-color: var(--primari-color);
+    border-radius: 999px;
 
- .button_hero_right .decs{
-    color: #171100;
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 1.66; 
+}
 
- }
-
- .colect{
-    display: flex;
- }
-
- .colect_left, .colect_right{
-    display: flex;
- }
-
- .colect_left strong , 
- .colect_right strong{
-    font-family: Sen;
-    font-size: 4.4rem;
-    font-weight: 700;
- }
-
- .colect_left p , .colect_right p {
-    font-family: Poppins;
-    font-size: 1.8rem;
-    font-weight: 400px;
-    
-
- }
- /* block img */
-
- .img_block{
-    padding: 28px 58px 28px 24px;
+.watch_video{
+    border: none;
     background: #FFF;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    border-radius: 12px;
-    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
- }
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
 
+}
 
- .img_block_content_1{
+.watch_video .icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px 58px 11px 12px;
- }
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
 
- 
+}
+
+.watch_video span{
+    margin-left: 14px;
+    color: #171100;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.hero .stats{
+    margin: 8px 0 0 0px;
+}
+
+.stats strong{
+    color: #171100;
+    font-family: Sen;
+    font-size: 4.4rem;
+     font-weight: 700;
+    line-height: 54px; /* 122.727% */
+}
+/* popular  */
+.popular{
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.poppular_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.infor .heading{
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.76px;
+
+}
+.infor .decs{
+    margin-top: 16px;
+    width: 458px;
+    color: #5F5B53;
+    font-family: Poppins;
+    font-size: 1,8rem;
+    font-weight: 400;
+    line-height: 30px; 
+}
+/* button control */
+.poppular_top .control{
+    display: flex;
+    gap: 18px;
+}
+.control_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: var(--primari-color);
+    border: 1px solid var(--primari-color);
+}
+
+.control .control_btn:hover{
+    color: #fff ;
+    background: var(--primari-color);
+} 
+/* popular list */
+.list{
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.list .item_card .thumb{
+    width: calc(100% + 2px);
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0 ;
+    vertical-align: bottom  ;
+    margin: -1px;
+}
+
+.list .item_card{
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #E2DFDA;
+    background: #FFF;
+}
+
+ .list .item_card .body_card{
+    padding: 16px 22px 22px;
+}
+
+/* css body list card */
+.list .item_card .head,
+.poppular_footer,
+.list .item_card .rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list .item_card .head h3{
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+}
+
+.list .item_card .rating span{
+    color: var(--primari-color);
+    display: inline-block;
+    
+}
+
+.list .body_card .decs{
+    margin-top: 6px;
+    color: #5F5B53;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85;
+}
+.list .body_card .poppular_footer{
+    margin-top: 12px;
+
+}
+
+.list .poppular_footer .rice{
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+}
