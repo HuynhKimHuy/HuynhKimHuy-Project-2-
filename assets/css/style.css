@@ -11,6 +11,7 @@ html{
 body{
     font-size: 1.6rem;
     font-family: 'Poppins';
+    scroll-behavior:smooth;
 }
 /*common*/
 .main_content{
@@ -19,16 +20,39 @@ body{
     max-width: calc(100% - 48px);
 }
 
-.btn{
 
-}
 
 a{
     text-decoration: none;
 }
 
+.btn{
+    display: inline-block ;
+    min-width: 118px;
+    color: #FFF;
+    padding: 0 10px;
+    line-height: 50px ;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 24.5px;
+    background: #171100;    
+}
+
+.line_clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line_clamp,1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line_clamp.line_2{
+    --line_clamp: 2 ;
+}
+
 :root{
     --primari-color: #FFB900;
+   
 }
 
 /* Heder */
@@ -39,27 +63,23 @@ a{
     z-index: 1;
     background-color: #FFFCF4;
 }
+
 .header .body{
     display: flex  ;
     align-items: center;
     justify-content: center;
     padding: 36px 0 8px ;
-
-    
 }
-
 
 .nav{
     margin-left: auto;
     margin-right: 60px;
 }
 
-
 .nav ul{
     display: flex;
     margin-left: auto;
 }
-
 
 .nav a {
     color: #5F5B53;
@@ -87,20 +107,6 @@ a{
     background-color: #171100;
 }
 
- .btn{
-    display: inline-block ;
-    min-width: 118px;
-    color: #FFF;
-    padding: 0 10px;
-    line-height: 50px ;
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 600;
-    border-radius: 24.5px;
-    background: #171100;    
-    
-}
-
 .action .btn-signup{
     min-width: 144px;
     
@@ -111,16 +117,19 @@ a{
     padding: 64px 0 64px;
     
 }
+
 .hero_content{
     display: flex;
    
     
 }
+
 .media_content_left{
     width: 48%;
     position: relative;
     
 }
+
 /* css img content left */
 .img_content_left img{
     width: 470px;
@@ -185,7 +194,7 @@ a{
    margin-left: 130px;
     padding-top: 64px;
 }
-.title{
+ .content_hero_right .body_conent_hero_right .title{
     width: 470px;
     color: #171100;
     font-family: Sen;
@@ -196,7 +205,7 @@ a{
     letter-spacing: -1.16px
 }
 
-.content_hero_right .decs{
+.content_hero_right .body_conent_hero_right .decs{
     color: #5F5B53;
     font-size: 1.8rem;
     font-style: normal;
@@ -281,7 +290,7 @@ a{
     letter-spacing: -0.76px;
 
 }
-.infor .decs{
+ .popular .infor .decs{
     margin-top: 16px;
     width: 458px;
     color: #5F5B53;
@@ -338,6 +347,11 @@ a{
     padding: 16px 22px 22px;
 }
 
+.list .item_card:hover{
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid white;
+}
+
 /* css body list card */
 .list .item_card .head,
 .poppular_footer,
@@ -371,12 +385,90 @@ a{
 }
 .list .body_card .poppular_footer{
     margin-top: 12px;
-
 }
 
 .list .poppular_footer .rice{
     color: #171100;
+    font-family: 'Poppins';
     font-size: 1.8rem;
     font-weight: 600;
-    line-height: 1.66; /* 166.667% */
+    line-height: 1.66;
 }
+
+.list .poppular_footer button{
+    border: none;
+}
+
+.list .poppular_footer button:hover{
+    background-color: var(--primari-color);
+}
+/* =====Feedback===== */
+.feedback{
+    margin-top: 135px;
+    padding: 96px 0;
+    background: #2E2100;;
+}
+
+.feedback_list{
+    display: flex;
+    overflow: hidden;
+    
+}
+.feedback .feedback_item{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    
+}
+
+.feedback .content{
+    width: 66% ;
+    margin-left: auto;
+}
+.feedback .feedback_item .avatar{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .infor .title{
+    margin-top: 18px;
+    color: #F7F7F7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41; /* 141.667% */
+}
+
+.feedback .infor .decs{
+    margin-top: 4px;
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85; 
+
+}
+.feedback .infor .dots{
+    display: flex;
+    margin-top: 28px;
+
+}
+
+.feedback .infor .dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    margin-right: 6px;
+}
+.feedback .content blockquote{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.53; 
+    margin-left: 30px;
+ }
